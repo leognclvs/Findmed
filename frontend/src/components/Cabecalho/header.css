@@ -1,0 +1,19 @@
+.cabecalho {
+    margin: 0;
+    height: 12vh;
+    background-color: black;
+    display: flex;
+}
+
+#logo {
+    width: 100px;
+    height: 60px;
+    margin-left: 60px;
+    margin-top: 10px;
+}
+
+#nome {
+    margin-left: 40px;
+    margin-top: 10px;
+    height: 70px;
+}

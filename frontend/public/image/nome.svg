@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288.3 84.29">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-4 {
+        fill: #fff;
+        font-family: Leo, Leo;
+        font-size: 74px;
+      }
+    </style>
+  </defs>
+  <g id="Camada_1-2" data-name="Camada 1">
+    <text class="cls-4" transform="translate(0 62.9)"><tspan class="cls-1" x="0" y="0">F</tspan><tspan x="39.37" y="0">ind</tspan><tspan class="cls-3" x="146.07" y="0">M</tspan><tspan class="cls-2" x="211.56" y="0">ed</tspan></text>
+  </g>
+</svg>

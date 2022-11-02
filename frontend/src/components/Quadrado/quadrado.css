@@ -1,0 +1,15 @@
+.quadrado {
+    width: 45%;
+    height: 78vh;
+    background-color: #C1C0AE;
+    border-radius: 30px;
+    margin: 10px 30px 10px 10px;
+}
+
+.quadradinho {
+    width: 95%;
+    height: 30%;
+    background-color: #89A09A;
+    border-radius: 30px;
+    margin: 2% 2.5%;
+}
