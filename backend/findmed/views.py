@@ -5,6 +5,7 @@ from .serializer import SintomaSerializer, MedicamentoSerializer, IndicacaoSeria
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.response import Response
 from django.db.models import Q
+from django.db import connection
 
 class SintomaViewSet(viewsets.ModelViewSet):
     queryset = Sintoma.objects.all()
@@ -39,6 +40,21 @@ class teste(viewsets.ModelViewSet):
         list_id = request.data.getlist('list_id')
         list_nb = list(map(int, list_id))
         print(list_nb[0])
-        query = Indicacao.objects.filter(Q(sintoma=list_nb[0]) and Q(sintoma=list_nb[1])).values('medicamento__nome', 'medicamento__dose','medicamento__concentracao', 'medicamento__posologia')
+        and_condition = Q()
+        for value in list_nb:
+            and_condition.add(Q(**{'sintoma': value}), Q.OR)
+        print(and_condition)
+        
+        query = Indicacao.objects.filter(and_condition).values('medicamento__nome', 'medicamento__dose','medicamento__concentracao', 'medicamento__posologia').distinct()
+        print(query.query)
 
         return Response(query)
+
+# def my_custom_sql():
+#     with connection.cursor() as cursor:
+#         cursor.execute("SE")
+#         row = cursor.fetchone()
+
+#     return row
+
+# print(my_custom_sql())
